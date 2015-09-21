@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
 
-	def index
-		@posts = [
-			{
+	def post0
+		@post = {
 				title:"Superhumanly attractive",
 				author: "Beautiful women around the world",
 				text: <<-eos.gsub(/\s+/, " ").strip
@@ -11,8 +10,11 @@ class PostsController < ApplicationController
 				myself now so that I don't have to see anything that
 				isn't him.
 				eos
-				},
-			{
+			}
+	end
+
+	def post1
+		@post = {
 				title: "Unparalleled Brilliance",
 				author: "Leonardo da Vinci",
 				text: <<-eos.gsub(/\s+/, " ").strip
@@ -22,14 +24,17 @@ class PostsController < ApplicationController
 				I wish I were more like him and not such a worthless piece
 				of garbage.	
 				eos
-				},
-			{
+			}
+	end
+
+	def post2
+		@post = {
 				title: "Pretty Average Guy",
 				author: "Somebody ugly and stupid",
 				text: <<-eos.gsub(/\s+/, " ").strip
 				Pretty ordinary.. He's alright I guess
 				eos
-				}]
+				}
 	end
 	
 end
